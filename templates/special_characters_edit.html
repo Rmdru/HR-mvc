@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="/static/logotestcorrect.ico">
+        <style>
+        table, th, td {
+          border: 1px solid white;
+          border-collapse: collapse;
+        }
+        th, td {
+          background-color: #96D4D4;
+        }
+        </style>
+    <meta charset="utf-8"/>
+    <title>Vraag bewerken</title>
+    <meta name="description" content="Simple database display"/>
+    <meta name="author" content="Rotterdam Academy"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="/static/basic.css" type="text/css">
+    <style>
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+<body style="background-color:darkcyan;">
+    <img src="/static/logotest.png" width="200" height="100"> 
+</body>
+<main>
+    <h1>Database onderzoek</h1>
+    <a href="/special_characters">Terug</a>
+    <p>Vraag {{ id }} bewerken:</p>
+    <form method="POST">
+        <input type="hidden" name="id" value="{{ id }}" />
+        <textarea name="question" rows="10" cols="100">{{ question }}</textarea>
+        <input type="submit" value="Opslaan" />
+    </form>
+</main>
+</body>
+</html>

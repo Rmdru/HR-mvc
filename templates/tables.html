@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <style>
+        table, th, td {
+          border: 1px solid white;
+          border-collapse: collapse;
+        }
+        th, td {
+          background-color: #96D4D4;
+        }
+        </style>
+    <meta charset="utf-8"/>
+    <title>Database displayer</title>
+    <link rel="icon" type="image/x-icon" href="/static/logotestcorrect.ico">
+    <meta name="description" content="Simple database display"/>
+    <meta name="author" content="Rotterdam Academy"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="/static/basic.css" type="text/css">
+</head>
+<body style="background-color:darkcyan;">
+  <img src="/static/logotest.png" width="200" height="100"> 
+</body>
+<main>
+
+    
+    <h1>Database onderzoek</h1>
+
+    <a href="/uitloggen">Uitloggen</a>
+    <p>Alle tabellen in de database:</p>
+    <ul>
+        {% for table in table_list %}
+        <li><a href="/table_details/{{ table }}" class="buttonstyle_blue">{{ table }}</a></li>
+        {% endfor %}
+    
+    <p>Klik op een van de onderstaande problemen om te kijken welke database rijen te maken hebben met het geselecteerde probleem.</p>
+    <ul>
+        <li><a href="/special_characters" class="buttonstyle_green">Speciale karakters</a></li>
+        <li><a href="/null_values" class="buttonstyle_green">NULL waarden</a></li>
+        <li><a href="/data_types" class="buttonstyle_green">Data types</a></li>
+        <li><a href="/foute_leerdoelen" class="buttonstyle_green">Foute leerdoelen</a></li>
+        <li><a href="/Spec_quest" class="buttonstyle_green">Vragen die vallen tussen specifieke waardes</a></li>
+    </ul>
+</main>
+</body>
+</html>

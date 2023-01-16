@@ -1,0 +1,19 @@
+.a {
+	background-color:#004DF5;
+	border-radius:7px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #00194e;
+}
+.buttonstyle_green:hover {
+	background-color:#003dc1;
+}
+.buttonstyle_green:active {
+	position:relative;
+	top:1px;
+}

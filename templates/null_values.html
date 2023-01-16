@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="/static/logotestcorrect.ico">
+        <style>
+        table, th, td {
+          border: 1px solid white;
+          border-collapse: collapse;
+        }
+        th, td {
+          background-color: #96D4D4;
+        }
+        </style>
+    <title>NULL waarden</title>
+    {% include "head.html" %}
+</head>
+<body class="null_values_page"
+style="background-color:darkcyan;">
+<img src="/static/logotest.png" width="200" height="100"> 
+</body>
+<main>
+    <h1>Database onderzoek</h1>
+    <a href="/">Terug</a><br />
+    <a href="/null_values/export" class="buttonstyle_blue">CSV export</a>
+    <p>NULL waardes:</p>
+    <table>
+        <thead>
+        <tr>
+            {% for column in columns %}
+            <th>{{ column }}</th>
+            {% endfor %}
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for row in rows %}
+        <tr class="row displayNone">
+            <td>{{ row.0 }}</td>
+            <td>{{ row.1 }}</td>
+            <td>{{ row.2 }}</td>
+            <td>{{ row.3 }}</td>
+            <td><a href="/null_values/edit/{{ row.0 }}" class="buttonstyle_blue">Bewerken</a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <button class="loadMoreBttn buttonstyle_blue center">Meer laden</button>
+    {% include "footer.html" %}
+</main>
+</body>
+</html>
